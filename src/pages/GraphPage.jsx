@@ -4,7 +4,6 @@ import {
     Background,
     ReactFlow,
     Controls,
-    MarkerType,
 } from '@xyflow/react';
 import { useGraph } from '../context/GraphContext';
 import { TextNode } from '../components/TextNode';
@@ -17,7 +16,7 @@ import '../styles/App.css';
 
 const nodeTypes = { textNode: TextNode };
 const edgeTypes = { custom: CustomEdge };
-const defaultEdgeOptions = { type: 'custom', markerEnd: { type: MarkerType.ArrowClosed, color: '#b1b1b7' } };
+const defaultEdgeOptions = { type: 'custom' };
 
 function MyGraphEditor() {
     const { nodes, edges, onNodesChange, onEdgesChange, onConnect, addNode, addTestCase } = useGraph();

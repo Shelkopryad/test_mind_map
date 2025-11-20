@@ -1,15 +1,16 @@
 import React, { createContext, useState, useContext, useCallback } from 'react';
-import { applyNodeChanges, applyEdgeChanges, addEdge, MarkerType } from '@xyflow/react';
+import { applyNodeChanges, applyEdgeChanges, addEdge } from '@xyflow/react';
 
 const GraphContext = createContext();
 
 export const useGraph = () => useContext(GraphContext);
 
 const initialNodes = [
-    { id: '1', position: { x: 100, y: 100 }, type: 'textNode', data: { label: '14f134fw', description: 'Handles initial user onboarding processes.' } },
-    { id: '2', position: { x: 300, y: 200 }, type: 'textNode', data: { label: '245grtgwerg', description: 'Manages payment gateway integration.' } },
-    { id: '3', position: { x: 200, y: 300 }, type: 'textNode', data: { label: '56g6g36h356', description: 'Responsible for order fulfillment logic.' } },
-    { id: '4', position: { x: 400, y: 400 }, type: 'textNode', data: { label: '34t3t45g4', description: 'Tracks shipping and delivery updates.' } },
+    { id: '1', position: { x: 100, y: 100 }, type: 'textNode', data: { label: 'Order', description: 'Handles initial user onboarding processes.' } },
+    { id: '2', position: { x: 300, y: 200 }, type: 'textNode', data: { label: 'Payment', description: 'Manages payment gateway integration.' } },
+    { id: '3', position: { x: 200, y: 300 }, type: 'textNode', data: { label: 'Opportunity', description: 'Responsible for order fulfillment logic.' } },
+    { id: '4', position: { x: 400, y: 400 }, type: 'textNode', data: { label: 'Product', description: 'Tracks shipping and delivery updates.' } },
+    { id: '5', position: { x: 500, y: 250 }, type: 'textNode', data: { label: 'Reports', description: 'Tracks shipping and delivery updates.' } },
 ];
 
 const initialEdges = [];
